@@ -1,0 +1,24 @@
+set vcs_aware true
+rename info
+set colorscheme rain
+set colorscheme snow
+set colorscheme jungle
+set colorscheme solarized
+set show_hidden true
+open_with 
+shell nvim *.vim
+rename init-old.vim
+rename init.vim
+find 
+rename config-old
+rename config
+mkdir SCREEN
+search 
+mkdir RECTANGLE
+
+shell chmod +x screen.sh 
+shell chmod +x capture-monitor.sh 
+delete
+rename back-old.jpg
+rename back.jpg
+shell ./.fehbg

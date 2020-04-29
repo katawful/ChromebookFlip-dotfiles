@@ -1,0 +1,21 @@
+general {
+	output_format = "i3bar"
+	separator = " "
+	colors = true
+	interval = 1
+}
+
+order += "disk /"
+order += "memory"
+order += "time"
+
+
+disk "/" {
+	format = "%avail"
+}
+memory {
+	format = "%avail"
+}
+time {
+	format = "%d-%m-%Y %H:%M:%S"
+}

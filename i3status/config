@@ -1,0 +1,34 @@
+general {
+	output_format = "i3bar"
+	separator = " "
+	colors = true
+	interval = 1 
+	markup = "pango"
+}
+
+order += "disk /"
+order += "wireless wlan0"
+order += "time"
+
+
+disk "/" {
+	format = "<span color='#458588' font='MesloLGS NF 12'></span> %avail"
+}
+
+wireless wlan0 {
+	format_up= "<span color='#98971a' font='MesloLGS NF 14'></span><span color='#ebdbb2'>%quality at %essid</span>"
+	format_down= "<span color='#cc241d' font='MesloLGS NF 14'>睊</span> <span color='#ebdbb2'>Disconnected</span>"
+}
+
+
+battery 0 {
+	format = "%status %percentage %remaining"
+	path = "/sys/class/power_supply/bq27500-0/uevent"
+	status_chr = "<span color='#d79921'></span>"
+	status_bat = "<span color='#cc241d'></span>"
+	status_full = "<span color='#b8bb26'></span>"
+}
+
+time {
+	format = "%m/%d/%Y %H:%M"
+}
